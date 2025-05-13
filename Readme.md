@@ -32,7 +32,11 @@ Installation de docker
 
 ![Texte alternatif](images/install_docker.png)
 
-Installation de git
+Installation de git et Installation de kubectl
 
 ![Texte alternatif](images/Install_git.png)
+
+Installation de minikube + configuration du fichier Dockerfile
+![Texte alternatif](images/Install_minikub.png)
+
 
