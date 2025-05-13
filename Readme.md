@@ -25,30 +25,29 @@ kubectl : Pour interagir avec le cluster Kubernetes.
 📅 Etapes du projet
 
 
-![Texte alternatif](images/installation_2025.png)
+
 Installation des outils de base
+![Texte alternatif](images/installation_2025.png)
 
 
 
-
-![Texte alternatif](images/install_docker.png)
 Installation de docker
+![Texte alternatif](images/install_docker.png)
 
 
 
 
-![Texte alternatif](images/Install_git.png)
 Installation de git et Installation de kubectl
+![Texte alternatif](images/Install_git.png)
 
 
 
 
-![Texte alternatif](images/Install_minikub.png)
 Installation de minikube + configuration du fichier Dockerfile
+![Texte alternatif](images/Install_minikub.png)
 
 
 
-![Texte alternatif](images/Requirement_docker_build.png)
 Je créé un fichier requirements.txt avec nano.
  C’est pour que Docker installe cette version précise de Flask dans mon image.
 
@@ -63,11 +62,11 @@ J’ai "renommé" l’image avec un tag Docker Hub pour pouvoir la pousser en li
 adam2696 c’est mon identifiant Docker Hub.
 
 👉 C’est une exigence pour pouvoir la publier sur mon Docker Hub.
+![Texte alternatif](images/Requirement_docker_build.png)
 
 
 
 
-![Texte alternatif](images/Connexion_docker_image.png)
 🧱 docker login -u adam2696
 Je me suis connecté à Docker Hub avec mon identifiant.
 
@@ -86,7 +85,7 @@ J’ai ajouté un label env=prod à ce namespace (pratique pour l'organisation).
 
 🧱 kubectl apply -f ic-webapp-deployment.yaml -n icgroup
 J’ai déployé mon application (Deployment + Service) dans le namespace icgroup.
-
+![Texte alternatif](images/Connexion_docker_image.png)
 
 
 
