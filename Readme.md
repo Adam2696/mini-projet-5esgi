@@ -25,8 +25,10 @@ kubectl : Pour interagir avec le cluster Kubernetes.
 📅 Etapes du projet
 
 Installation des outils de base
+
 ![Texte alternatif](images/installation_2025.png)
 
 Installation de docker
+
 ![Texte alternatif](images/install_docker.png)
 
