@@ -161,3 +161,39 @@ Vérification des logs : Utilise kubectl logs pour vérifier les logs du pod et 
 Cela permet de résoudre un conflit de port et relancer Odoo proprement.
 
 ![Texte alternatif](images/Error.png)
+
+
+L'exécution de la commande kubectl logs odoo-866d5d5d48-4fvgq -n icgroup montre que le pod Odoo démarre correctement. Voici une explication de ce que les logs révèlent :
+
+Configuration : Odoo utilise le fichier de configuration situé à /etc/odoo/odoo.conf.
+
+Base de données : Il se connecte à la base de données PostgreSQL via odoo-db sur le port 5432.
+
+Modules : Odoo charge plusieurs modules sans erreur.
+
+Service HTTP : Le service HTTP d'Odoo (Werkzeug) tourne sur le port 8069 du pod Odoo.
+
+Ensuite, avec kubectl get pods --all-namespaces -o wide, tu vérifies l'état de tous les pods Kubernetes dans tous les namespaces. Tous les pods (y compris Odoo, Odoo DB, etc.) sont "Running" et sont associés à l'adresse IP 10.244.x.x sur le cluster Kubernetes.
+
+Cela indique que tous les services sont actifs et fonctionnent correctement dans le cluster.
+![Texte alternatif](images/images/Verification.png)
+
+
+minikube service ic-webapp -n icgroup
+Cette commande ouvre le service ic-webapp sur ton navigateur à l'adresse http://192.168.49.2:30641. Ce service est exposé via un NodePort sur le port 30641.
+
+minikube service ic-webapp-v2 -n icgroup
+Elle ouvre le service ic-webapp-v2 à l'adresse http://192.168.49.2:30205, exposé via le port 30205 grâce à NodePort.
+
+minikube service odoo -n icgroup
+Elle ouvre le service odoo sur le navigateur à http://192.168.49.2:32000, exposé via NodePort sur le port 32000.
+
+minikube service pgadmin -n icgroup
+Elle ouvre le service pgadmin à l'adresse http://192.168.49.2:30080, exposé via NodePort sur le port 30080.
+
+![Texte alternatif](images/Expositionservice.png)
+
+
+La commande ssh -L crée des tunnels SSH pour rediriger des ports locaux vers des ports distants. Cela permet d'accéder à des services sur la machine distante via des ports locaux sur ta machine. Ici, tu rediriges plusieurs services Minikube (comme ic-webapp, odoo, etc.) de l'adresse 192.168.49.2 vers ton ordinateur local à travers des ports comme 31000, 31001, etc.
+
+![Texte alternatif](images/acces.png)
