@@ -32,3 +32,7 @@ Installation de docker
 
 ![Texte alternatif](images/install_docker.png)
 
+Installation de git
+
+![Texte alternatif](images/Install_git.png)
+
