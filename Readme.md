@@ -94,4 +94,18 @@ J’ai déployé mon application (Deployment + Service) dans le namespace icgrou
 ![Texte alternatif](images/Connexion_docker_image.png)
 
 
+Exposer un service Kubernetes
+
+La commande kubectl expose permet de rendre un déploiement accessible depuis l'extérieur du cluster Kubernetes. Elle expose le déploiement sous forme de service et spécifie le type de service (ici NodePort) ainsi que le port sur lequel il doit être accessible.
+
+Vérifier les services
+
+La commande kubectl get services -n icgroup liste les services actifs dans le namespace icgroup. Cela permet de vérifier les adresses IP internes, les ports attribués ainsi que les types de services (ici NodePort), ce qui te permet de savoir comment accéder à chaque service.
+
+Accéder à un service via Minikube
+
+La commande minikube service ouvre un service spécifique dans ton navigateur. Elle utilise l'adresse IP du cluster local Minikube et le port exposé du service pour te permettre d'accéder à ton application web via une URL locale.
+
+![Texte alternatif](images/Exposition_port.png)
+
 
