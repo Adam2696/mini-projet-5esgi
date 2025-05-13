@@ -140,3 +140,7 @@ Création du fichier odoo-db-doploymont.yaml
 Création du fichier pgadmin-deployment.yaml
 ![Texte alternatif](images/pgadmin-deployment.png)
 ![Texte alternatif](images/pgadmin-deployment2.png)
+
+
+La commande kubectl create configmap permet de créer un ConfigMap dans Kubernetes, qui est un objet utilisé pour stocker des données de configuration sous forme de paires clé-valeur.
+![Texte alternatif](images/ConfigMap.png)
