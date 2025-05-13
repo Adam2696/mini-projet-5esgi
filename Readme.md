@@ -28,5 +28,5 @@ Installation des outils de base
 ![Texte alternatif](images/installation_2025.png)
 
 Installation de docker
-![Texte alternatif](install_docker.png)
+![Texte alternatif](images/install_docker.png)
 
