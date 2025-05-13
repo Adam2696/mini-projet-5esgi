@@ -93,6 +93,9 @@ J’ai déployé mon application (Deployment + Service) dans le namespace icgrou
 
 ![Texte alternatif](images/Connexion_docker_image.png)
 
+Vérfication de la création de l'image sur DockerHub
+![Texte alternatif](images/Docker_image_prete.png)
+
 
 Exposer un service Kubernetes
 
