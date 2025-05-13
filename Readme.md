@@ -144,3 +144,7 @@ Création du fichier pgadmin-deployment.yaml
 
 La commande kubectl create configmap permet de créer un ConfigMap dans Kubernetes, qui est un objet utilisé pour stocker des données de configuration sous forme de paires clé-valeur.
 ![Texte alternatif](images/ConfigMap.png)
+
+
+Les commandes que tu as exécutées appliquent des fichiers de configuration Kubernetes pour déployer Odoo, la base de données PostgreSQL, pgAdmin et ton application web dans le namespace icgroup. Ensuite, kubectl get all liste tous les pods, services et déploiements créés. Les services sont exposés sur des ports spécifiques, comme 8080:30641/TCP pour ic-webapp. Tout est en Running et prêt à fonctionner, sans IP externe définie pour l'accès direct.
+![Texte alternatif](images/podsdeploy.png)
