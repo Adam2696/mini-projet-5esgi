@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: ic-webapp
+  namespace: icgroup
+spec:
+  selector:
+    app: ic-webapp
+  ports:
+    - protocol: TCP
+      port: 8080
+      targetPort: 8080
+      nodePort: 30641
+  type: NodePort
+  externalTrafficPolicy: Local

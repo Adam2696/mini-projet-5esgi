@@ -1,0 +1,64 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: odoo-db
+  namespace: icgroup
+  labels:
+    app: odoo-db
+    env: prod
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: odoo-db
+  template:
+    metadata:
+      labels:
+        app: odoo-db
+    spec:
+      containers:
+        - name: postgres
+          image: postgres:13
+          env:
+            - name: POSTGRES_DB
+              value: odoo  # Name of the database that Odoo will use
+            - name: POSTGRES_USER
+              value: odoo  # Username to access the DB
+            - name: POSTGRES_PASSWORD
+              value: odoo  # Password for the DB user
+          volumeMounts:
+            - name: postgres-storage
+              mountPath: /var/lib/postgresql/data  # Path where PostgreSQL stores its data
+      volumes:
+        - name: postgres-storage
+          persistentVolumeClaim:
+            claimName: odoo-pvc  # Reference to PersistentVolumeClaim
+
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: odoo-pvc
+  namespace: icgroup
+  labels:
+    env: prod
+spec:
+  accessModes:
+    - ReadWriteOnce  # The volume can be mounted as read-write by a single node
+  resources:
+    requests:
+      storage: 1Gi  # You may want to increase the size if your database grows
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: odoo-db
+  namespace: icgroup
+  labels:
+    env: prod
+spec:
+  ports:
+    - port: 5432  # Default PostgreSQL port
+  selector:
+    app: odoo-db  # This links the service to the deployment
+

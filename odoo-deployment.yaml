@@ -1,0 +1,44 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: odoo
+  namespace: icgroup
+  labels:
+    app: odoo
+    env: prod
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: odoo
+  template:
+    metadata:
+      labels:
+        app: odoo
+    spec:
+      containers:
+        - name: odoo
+          image: odoo:13
+          env:
+            - name: HOST
+              value: odoo-db
+            - name: USER
+              value: odoo
+            - name: PASSWORD
+              value: odoo
+          ports:
+            - containerPort: 8069
+          volumeMounts:
+            - name: odoo-storage
+              mountPath: /var/lib/odoo
+            - name: config-volume
+              mountPath: /etc/odoo/odoo.conf
+              subPath: odoo.conf   # Specify the file to mount
+      volumes:
+        - name: odoo-storage
+          persistentVolumeClaim:
+            claimName: odoo-odoo-pvc
+        - name: config-volume
+          configMap:
+            name: odoo-config
+
