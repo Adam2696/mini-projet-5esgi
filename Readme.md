@@ -197,3 +197,20 @@ Elle ouvre le service pgadmin à l'adresse http://192.168.49.2:30080, exposé vi
 La commande ssh -L crée des tunnels SSH pour rediriger des ports locaux vers des ports distants. Cela permet d'accéder à des services sur la machine distante via des ports locaux sur ta machine. Ici, tu rediriges plusieurs services Minikube (comme ic-webapp, odoo, etc.) de l'adresse 192.168.49.2 vers ton ordinateur local à travers des ports comme 31000, 31001, etc.
 
 ![Texte alternatif](images/acces.png)
+
+
+
+TEST:
+ACCES AU SITE IC GROUP
+![Texte alternatif](images/SiteICGROUP.png)
+![Texte alternatif](images/SiteICGROUP2.png)
+
+ACCES PG ADMIN
+![Texte alternatif](images/loginpgadming.png)
+![Texte alternatif](images/PGADMIN.png)
+
+ACCES ODOO
+![Texte alternatif](images/loginodoo.png)
+![Texte alternatif](images/odoo.png)
+
+PROJET TERMINER
