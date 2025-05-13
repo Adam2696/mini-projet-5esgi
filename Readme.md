@@ -123,3 +123,8 @@ kubectl describe svc ic-webapp -n icgroup : Donne des détails sur le service, c
 
 ![Texte alternatif](images/webapp-service_yaml.png)
 
+
+Création du fichier ic-wobapp-doploymont.yaml
+![Texte alternatif](images/webapp-serviceyaml.png)
+
+
