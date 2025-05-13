@@ -109,3 +109,14 @@ La commande minikube service ouvre un service spécifique dans ton navigateur. E
 ![Texte alternatif](images/Exposition_port.png)
 
 
+
+kubectl get pods -n icgroup : Liste les pods dans le namespace icgroup et vérifie leur état.
+
+Création du Service : Le fichier YAML expose l'application via un service NodePort, accessible sur un port externe (30641).
+
+kubectl apply -f ic-webapp-service.yaml : Applique la configuration du service pour exposer l'app dans le cluster.
+
+kubectl describe svc ic-webapp -n icgroup : Donne des détails sur le service, comme son port externe et ses endpoints.
+
+![Texte alternatif](images/webapp-service_yaml.png)
+
