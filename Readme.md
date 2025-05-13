@@ -148,3 +148,16 @@ La commande kubectl create configmap permet de créer un ConfigMap dans Kubernet
 
 Les commandes que tu as exécutées appliquent des fichiers de configuration Kubernetes pour déployer Odoo, la base de données PostgreSQL, pgAdmin et ton application web dans le namespace icgroup. Ensuite, kubectl get all liste tous les pods, services et déploiements créés. Les services sont exposés sur des ports spécifiques, comme 8080:30641/TCP pour ic-webapp. Tout est en Running et prêt à fonctionner, sans IP externe définie pour l'accès direct.
 ![Texte alternatif](images/podsdeploy.png)
+
+
+L'erreur OSError: [Errno 98] Address already in use indique que le port que Odoo tente d'utiliser (probablement le port 8069) est déjà occupé par un autre processus. Pour résoudre cela :
+
+Vérification des processus : Tu as identifié et tué un processus avec kill (ID 75344).
+
+Redémarrage du Pod Kubernetes : Pour forcer la réinitialisation de l'application, utilise kubectl delete pod afin de tuer le pod et permettre à Kubernetes de le redémarrer sans conflit de port.
+
+Vérification des logs : Utilise kubectl logs pour vérifier les logs du pod et diagnostiquer d'autres problèmes.
+
+Cela permet de résoudre un conflit de port et relancer Odoo proprement.
+
+![Texte alternatif](images/Error.png)
