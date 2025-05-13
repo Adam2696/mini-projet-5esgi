@@ -127,4 +127,6 @@ kubectl describe svc ic-webapp -n icgroup : Donne des détails sur le service, c
 Création du fichier ic-wobapp-doploymont.yaml
 ![Texte alternatif](images/webapp-serviceyaml.png)
 
+Création du fichier configurer les paramètres de l' instance Odoo Ce fichier est essentiel pour l'initialisation et la configuration d'Odoo
+![Texte alternatif](images/instance_odoos.png)
 
