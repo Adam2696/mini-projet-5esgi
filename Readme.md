@@ -56,3 +56,25 @@ adam2696 c’est mon identifiant Docker Hub.
 ![Texte alternatif](images/Requirement_docker_build.png)
 
 
+🧱 docker login -u adam2696
+Je me suis connecté à Docker Hub avec mon identifiant.
+
+🧱 docker push adam2696/ic-webapp:1.0
+J’ai envoyé mon image Docker vers Docker Hub.
+✅ L’image est maintenant disponible en ligne.
+
+🧱 minikube start --driver=docker
+J’ai lancé un cluster Kubernetes local avec Minikube en utilisant Docker comme moteur.
+
+🧱 kubectl create namespace icgroup
+J’ai créé un namespace Kubernetes nommé icgroup pour isoler mes ressources.
+
+🧱 kubectl label namespace icgroup env=prod
+J’ai ajouté un label env=prod à ce namespace (pratique pour l'organisation).
+
+🧱 kubectl apply -f ic-webapp-deployment.yaml -n icgroup
+J’ai déployé mon application (Deployment + Service) dans le namespace icgroup.
+
+![Texte alternatif](images/Connexion_docker_image.png)
+
+
