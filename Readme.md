@@ -130,3 +130,10 @@ Création du fichier ic-wobapp-doploymont.yaml
 Création du fichier configurer les paramètres de l' instance Odoo Ce fichier est essentiel pour l'initialisation et la configuration d'Odoo
 ![Texte alternatif](images/instance_odoos.png)
 
+Création du fichier odoo-deploymont.yaml
+![Texte alternatif](images/odoo-deploymont.png)
+
+
+Création du fichier odoo-db-doploymont.yaml
+![Texte alternatif](images/odoo-db-doploymont1.png)
+![Texte alternatif](images/odoo-db-doploymont2.png)
