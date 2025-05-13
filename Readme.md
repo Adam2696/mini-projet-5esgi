@@ -39,4 +39,20 @@ Installation de git et Installation de kubectl
 Installation de minikube + configuration du fichier Dockerfile
 ![Texte alternatif](images/Install_minikub.png)
 
+Je créé un fichier requirements.txt avec nano.
+ C’est pour que Docker installe cette version précise de Flask dans mon image.
+
+ docker build -t ic-webapp:1.0 .
+J’ai construit une image Docker depuis le Dockerfile de mon dossier courant (.).
+Je lui ai donné le nom ic-webapp et le tag 1.0.
+
+👉 À la fin, j’obtiens une image locale prête à être testée ou poussée.
+
+🧱 docker tag ic-webapp:1.0 adam2696/ic-webapp:1.0
+J’ai "renommé" l’image avec un tag Docker Hub pour pouvoir la pousser en ligne.
+adam2696 c’est mon identifiant Docker Hub.
+
+👉 C’est une exigence pour pouvoir la publier sur mon Docker Hub.
+![Texte alternatif](images/Requirement_docker_build.png)
+
 
