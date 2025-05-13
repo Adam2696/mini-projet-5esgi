@@ -13,4 +13,4 @@ Un site web vitrine Flask personnalisable via variables d'environnement
 📅 Etapes du projet
 
 1) Installation des outils de base
-![Texte alternatif](images/Capture d'écran 2025-05-13 220635.png)
+![Texte alternatif](images/installation_2025.png)
