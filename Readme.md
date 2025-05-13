@@ -138,5 +138,5 @@ Création du fichier odoo-db-doploymont.yaml
 ![Texte alternatif](images/odoo-db-doploymont1.png)
 
 Création du fichier pgadmin-deployment.yaml
-![Texte alternatif](images/images/images/pgadmin-deployment.png)
-![Texte alternatif](images/images/images/pgadmin-deployment2.png)
+![Texte alternatif](images/images/pgadmin-deployment.png)
+![Texte alternatif](images/images/pgadmin-deployment2.png)
